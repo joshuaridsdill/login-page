@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" /> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="center-absolute header-header">Login website</h1>
+        </div>
+    </header>
+    <main>
+        <div class="login-container center">
+            <div class="login-box-container center">
+                <h1>User Login</h1>
+                <div class="login-inputs">
+                    <input class="rounded border-1-light-grey" type="email" placeholder="email" maxlength="30" />
+                    <input class="rounded border-1-light-grey" type="password" placeholder="password" maxlength="20" />
+                </div>
+                <button class="button rounded border-1-light-grey" onclick="onLoginSubmit()">Login</button>
+            </div>
+            <div class="loader-container">
+                <div id="loading-buffer" class="loader"></div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function onLoginSubmit() {
+            console.log("Attempting to login in...");
+            document.getElementById("loading-buffer").style.display = "block";
+            setTimeout(function() {
+                document.getElementById("loading-buffer").style.display = "none";
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
